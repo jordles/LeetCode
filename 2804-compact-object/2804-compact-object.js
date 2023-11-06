@@ -4,11 +4,8 @@
  */
 var compactObject = function(obj) {
     const data = Array.isArray(obj) ? obj.filter(Boolean) : obj;
-    console.log(data);
     return Object.keys(data).reduce(
         (acc, key) => {
-            console.log(data[key])
-            console.log('key ' + key)
             const value = data[key];
             if (Boolean(value)) //if our value is truthy, 
                 acc[key] = typeof value === 'object' ? compactObject(value) : value;
