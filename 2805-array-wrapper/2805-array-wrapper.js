@@ -17,7 +17,6 @@ ArrayWrapper.prototype.valueOf = function() {
  * @return {string}
  */
 ArrayWrapper.prototype.toString = function() {
-    console.log(this.nums)
     return `[${this.nums}]`
 }
 
